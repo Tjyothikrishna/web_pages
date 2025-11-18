@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll System - Auth</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+  <!-- RING Animation -->
+  <div class="ring">
+    <i style="--clr:#00ff0a;"></i>
+    <i style="--clr:#ff0057;"></i>
+    <i style="--clr:#fffd44;"></i>
+
+    <!-- LOGIN Form -->
+    <div class="login" id="loginForm">
+      <h2>Login</h2>
+      <div class="inputBx">
+        <input type="text" id="employeeId" placeholder="Employee ID" />
+      </div>
+      <div class="inputBx">
+        <input type="password" id="password" placeholder="Password" />
+      </div>
+      <div class="inputBx">
+        <input type="submit" value="Sign in" onclick="loginUser()" />
+      </div>
+      <div class="links">
+        <a href="#" onclick="showForgot()">Forget Password</a>
+        <a href="#" onclick="showSignup()">Signup</a>
+      </div>
+    </div>
+
+    <!-- SIGNUP Form -->
+    <div class="login hidden" id="signupForm">
+      <h2>Signup</h2>
+      <div class="inputBx">
+        <input type="text" id="signupEmployeeId" placeholder="Employee ID" />
+      </div>
+      <div class="inputBx">
+        <input type="email" id="signupEmail" placeholder="Company Email" />
+      </div>
+      <div class="inputBx">
+        <input type="password" id="signupPassword" placeholder="Password" />
+      </div>
+      <div class="inputBx">
+        <input type="submit" value="Register" onclick="signupUser()" />
+      </div>
+      <div class="links">
+        <a href="#" onclick="showLogin()">Back to Login</a>
+      </div>
+    </div>
+
+    <!-- FORGOT PASSWORD Form -->
+    <div class="login hidden" id="forgotForm">
+      <h2>Forgot Password</h2>
+      <div class="inputBx">
+        <input type="text" id="forgotEmployeeId" placeholder="Employee ID / Email" />
+      </div>
+      <div class="inputBx">
+        <input type="submit" value="Reset Password" onclick="resetPassword()" />
+      </div>
+      <div class="links">
+        <a href="#" onclick="showLogin()">Back to Login</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
